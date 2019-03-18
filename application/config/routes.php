@@ -49,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+$route['apply/(:num)'] = 'apply/index/$1';
 $route['Migration'] = 'Migration';
 $route['application/create'] = 'application/create';
 $route['default_controller'] = 'welcome';

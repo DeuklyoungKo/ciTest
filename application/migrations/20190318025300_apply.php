@@ -15,6 +15,7 @@ class Migration_apply extends CI_Migration {
 									  'email' => array(
 										  'type' => 'VARCHAR',
 										  'constraint' => '255',
+										  'unique' => TRUE,
 									  ),
 									  'name' => array(
 										  'type' => 'VARCHAR',
@@ -31,6 +32,7 @@ class Migration_apply extends CI_Migration {
 									  ),
 								  ));
 		$this->dbforge->add_key('id', TRUE);
+		$this->dbforge->add_key('email', TRUE);
 		$this->dbforge->create_table('apply');
 	}
 

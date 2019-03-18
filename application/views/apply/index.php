@@ -8,5 +8,6 @@
 	<h3><?php echo $apply_item['framework'] ?></h3>
 <!--	<p><a href="/news/view/--><?//=$news_item['id'] ?><!--">View article</a></p>-->
 <?php endforeach ?>
-
+<hr>
+[<?=$pagination?>]
 

@@ -6,7 +6,7 @@
  * Time: 오후 3:23
  */
 
-class applyModel extends CI_Model
+class ApplyModel extends CI_Model
 {
 	public function __construct()
 	{
@@ -18,7 +18,6 @@ class applyModel extends CI_Model
 	public function setApplyData(string $email, string $name, string $framework)
 	{
 
-
 		$data = array(
 			'email' => $email,
 			'name' => $name,
@@ -29,12 +28,18 @@ class applyModel extends CI_Model
 	}
 
 
-	public function getAppliesList()
+	public function getAppliesList(int $limit = null, int $start = null)
 	{
+		if (!is_null($limit) && !is_null($start)){
+			$this->db->limit($start, $limit);
+		}
 		$this->db->order_by('id DESC');
 		$query = $this->db->get('apply');
-
 		return $query->result_array();
+	}
+
+	public function recode_count(){
+		return $this->db->count_all('apply');
 	}
 
 }
