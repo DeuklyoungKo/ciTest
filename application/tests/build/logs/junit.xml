@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="CodeIgniter Application Test Suite" tests="3" assertions="2" failures="1" errors="0" time="0.118068">
+    <testsuite name="ApplicationControllerTest" file="/var/www/ci3/application/tests/controllers/ApplicationControllerTest.php" tests="2" assertions="2" failures="0" errors="0" time="0.114242">
+      <testcase name="testApplicationCreatePageConnect" class="ApplicationControllerTest" file="/var/www/ci3/application/tests/controllers/ApplicationControllerTest.php" line="11" assertions="1" time="0.075151"/>
+      <testcase name="testAfterApplicationMovePase" class="ApplicationControllerTest" file="/var/www/ci3/application/tests/controllers/ApplicationControllerTest.php" line="17" assertions="1" time="0.039091"/>
+    </testsuite>
+    <testsuite name="ApplicationModelTest" file="/var/www/ci3/application/tests/models/ApplicationModelTest.php" tests="1" assertions="0" failures="1" errors="0" time="0.003826">
+      <testcase name="Warning" assertions="0" time="0.003826">
+        <failure type="PHPUnit_Framework_AssertionFailedError">Warning
+No tests found in class "ApplicationModelTest".
+
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>
