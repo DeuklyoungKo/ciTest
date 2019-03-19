@@ -17,11 +17,11 @@ class Apply extends CI_Controller
 
 	public function index($listStartNum = 0){
 
-//		$this->output->enable_profiler(TRUE);
+		$this->output->enable_profiler(TRUE);
 
 		$total_count = $this->ApplyModel->recode_count();
 
-		$limitListCount = 5;
+		$limitListCount = 3;
 
 		$data['title'] = 'list';
 
@@ -30,11 +30,10 @@ class Apply extends CI_Controller
 		$config['base_url'] = '/apply';
 		$config['total_rows'] = $total_count;
 		$config['per_page'] = $limitListCount;
-		$config['uri_segment'] = 3;
+		$config['uri_segment'] = 2;
 		$this->pagination->initialize($config);
 		$data['pagination'] = $this->pagination->create_links();
-
-		$data['applies'] = $this->ApplyModel->getAppliesList(FALSE,$limitListCount,$listStartNum);
+		$data['applies'] = $this->ApplyModel->getAppliesList($limitListCount,$listStartNum);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('apply/index', $data);

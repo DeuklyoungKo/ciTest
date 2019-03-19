@@ -31,7 +31,7 @@ class ApplyModel extends CI_Model
 	public function getAppliesList(int $limit = null, int $start = null)
 	{
 		if (!is_null($limit) && !is_null($start)){
-			$this->db->limit($start, $limit);
+			$this->db->limit($limit,$start);
 		}
 		$this->db->order_by('id DESC');
 		$query = $this->db->get('apply');
